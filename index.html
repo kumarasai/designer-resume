@@ -10,32 +10,28 @@
 
   :root {
     --purple: #6B21E8;
-    --purple-light: #8B45F0;
-    --purple-dark: #5015C8;
     --coral: #FF6B6B;
     --bg: #F5EFE6;
     --card: #FDFAF6;
     --text: #1a1a2e;
-    --muted: #666;
-    --dot-color: #6B21E8;
+    --muted: #555;
   }
 
   body {
     font-family: 'Poppins', sans-serif;
-    background: #e8e0d8;
+    background: #ddd6cc;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    min-height: 100vh;
-    padding: 30px 10px;
+    padding: 24px 10px;
   }
 
   .resume {
     width: 960px;
     background: var(--card);
-    border-radius: 20px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.18);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.18);
   }
 
   /* ── HEADER ── */
@@ -43,307 +39,283 @@
     background: var(--purple);
     display: flex;
     align-items: stretch;
-    min-height: 210px;
+    height: 170px;
     position: relative;
-    overflow: visible;
+    overflow: hidden;
   }
-
   .header::before {
     content: '';
     position: absolute;
-    top: -60px; left: -60px;
-    width: 280px; height: 280px;
+    top: -50px; left: -50px;
+    width: 220px; height: 220px;
     background: rgba(255,255,255,0.06);
     border-radius: 50%;
   }
 
-  .header::after {
-    content: '';
-    position: absolute;
-    bottom: -80px; left: 80px;
-    width: 200px; height: 200px;
-    background: rgba(255,255,255,0.04);
-    border-radius: 50%;
-  }
-
-  /* Decorative shapes */
-  .deco {
-    position: absolute;
-    pointer-events: none;
-  }
-  .deco-cross1 { top: 22px; left: 30px; color: rgba(255,255,255,0.5); font-size: 22px; }
-  .deco-cross2 { bottom: 30px; left: 240px; color: rgba(255,255,255,0.4); font-size: 18px; }
-  .deco-circle1 { top: 30px; left: 155px; width: 10px; height: 10px; border-radius: 50%; background: #111; }
-  .deco-circle2 { top: 110px; left: 50px; width: 8px; height: 8px; border-radius: 50%; background: #FFD700; }
-  .deco-circle3 { bottom: 28px; left: 130px; width: 7px; height: 7px; border-radius: 50%; background: #FF6B6B; }
-  .deco-rect { top: 45px; left: 110px; width: 14px; height: 14px; border: 2px solid rgba(255,255,255,0.5); transform: rotate(15deg); }
-  .deco-line { top: 50px; left: 35px; width: 130px; height: 2px; background: rgba(255,255,255,0.3); transform: rotate(-10deg); }
-  .deco-circle4 { top: 45px; left: 160px; width: 12px; height: 12px; border: 2px solid rgba(255,255,255,0.5); border-radius: 50%; }
+  .deco { position: absolute; pointer-events: none; }
+  .deco-cross1 { top: 16px; left: 26px; color: rgba(255,255,255,0.45); font-size: 18px; }
+  .deco-cross2 { bottom: 20px; left: 230px; color: rgba(255,255,255,0.35); font-size: 15px; }
+  .deco-circle1 { top: 24px; left: 148px; width: 8px; height: 8px; border-radius: 50%; background: #111; }
+  .deco-circle2 { top: 100px; left: 44px; width: 7px; height: 7px; border-radius: 50%; background: #FFD700; }
+  .deco-circle3 { bottom: 20px; left: 122px; width: 6px; height: 6px; border-radius: 50%; background: #FF6B6B; }
+  .deco-rect { top: 38px; left: 104px; width: 12px; height: 12px; border: 2px solid rgba(255,255,255,0.45); transform: rotate(15deg); }
+  .deco-line { top: 44px; left: 30px; width: 110px; height: 2px; background: rgba(255,255,255,0.25); transform: rotate(-10deg); }
+  .deco-circle4 { top: 38px; left: 154px; width: 10px; height: 10px; border: 2px solid rgba(255,255,255,0.45); border-radius: 50%; }
 
   .header-illustration {
-    width: 260px;
+    width: 210px;
     flex-shrink: 0;
     position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding-bottom: 0;
   }
-
-  /* SVG illustration area — simplified character */
   .illus-bg-circle {
-    position: absolute;
-    bottom: 0; left: 50%;
+    position: absolute; bottom: 0; left: 50%;
     transform: translateX(-50%);
-    width: 190px; height: 190px;
+    width: 155px; height: 155px;
     background: rgba(255,255,255,0.92);
     border-radius: 50% 50% 0 0 / 60% 60% 0 0;
   }
   .illus-yellow-circle {
-    position: absolute;
-    bottom: 30px; left: 120px;
-    width: 110px; height: 110px;
-    background: #F5A623;
-    border-radius: 50%;
-    z-index: 1;
+    position: absolute; bottom: 22px; left: 98px;
+    width: 84px; height: 84px;
+    background: #F5A623; border-radius: 50%; z-index: 1;
   }
   .illus-purple-shape {
-    position: absolute;
-    bottom: 60px; left: 28px;
-    width: 80px; height: 100px;
+    position: absolute; bottom: 44px; left: 22px;
+    width: 62px; height: 78px;
     background: rgba(107,33,232,0.15);
-    border-radius: 60% 40% 50% 50%;
-    z-index: 1;
+    border-radius: 60% 40% 50% 50%; z-index: 1;
   }
-  .illus-person {
-    position: relative;
-    z-index: 3;
-    margin-bottom: 0;
-  }
-  .illus-person svg {
-    width: 170px;
-    height: 190px;
-  }
+  .illus-person { position: relative; z-index: 3; }
+  .illus-person svg { width: 138px; height: 155px; }
 
   .header-content {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 30px 20px 30px 10px;
+    padding: 20px 16px 20px 8px;
     z-index: 2;
   }
-
-  .header-hello {
-    color: rgba(255,255,255,0.85);
-    font-size: 15px;
-    font-weight: 400;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 4px;
-  }
-
+  .header-hello { color: rgba(255,255,255,0.82); font-size: 12.5px; margin-bottom: 2px; }
   .header-title {
     font-family: 'Nunito', sans-serif;
-    font-size: 46px;
-    font-weight: 900;
-    color: #fff;
-    line-height: 1.05;
-    margin-bottom: 0;
+    font-size: 36px; font-weight: 900;
+    color: #fff; line-height: 1.0;
   }
 
   .header-contact {
     flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 30px 36px 30px 16px;
-    z-index: 2;
-    gap: 6px;
-    min-width: 260px;
-    max-width: 280px;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: flex-end;
+    padding: 20px 28px 20px 12px;
+    z-index: 2; gap: 5px; min-width: 240px;
   }
-
   .header-contact p {
     color: rgba(255,255,255,0.9);
-    font-size: 12.5px;
-    font-family: 'Poppins', sans-serif;
-    text-align: right;
-    word-break: break-word;
-    white-space: normal;
+    font-size: 11px; text-align: right; word-break: break-word;
   }
-
   .download-btn {
-    margin-top: 14px;
-    background: var(--coral);
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    padding: 9px 22px;
-    font-size: 13px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    text-decoration: none;
-    transition: background 0.2s;
+    margin-top: 10px; background: var(--coral); color: #fff;
+    border: none; border-radius: 30px; padding: 6px 16px;
+    font-size: 11px; font-family: 'Poppins', sans-serif; font-weight: 600;
+    cursor: pointer; display: flex; align-items: center; gap: 5px; text-decoration: none;
   }
   .download-btn:hover { background: #e05555; }
 
   /* ── BODY ── */
-  .body {
-    display: flex;
-    background: var(--bg);
-  }
+  .body { display: flex; background: var(--bg); }
 
-  /* LEFT COLUMN */
+  /* LEFT */
   .left-col {
-    width: 270px;
-    flex-shrink: 0;
+    width: 245px; flex-shrink: 0;
     background: var(--bg);
-    padding: 36px 28px;
+    padding: 20px 20px;
     border-right: 1px solid rgba(0,0,0,0.06);
   }
 
   .section-title {
     font-family: 'Nunito', sans-serif;
-    font-size: 20px;
-    font-weight: 800;
-    color: var(--text);
-    margin-bottom: 6px;
+    font-size: 15px; font-weight: 800;
+    color: var(--text); margin-bottom: 3px;
   }
-
   .dotted-divider {
-    border: none;
-    border-top: 2px dotted #c8b8d8;
-    margin: 10px 0 20px 0;
+    border: none; border-top: 2px dotted #c8b8d8;
+    margin: 5px 0 10px 0;
   }
 
-  .profile-text {
-    font-size: 12.5px;
-    line-height: 1.7;
-    color: var(--muted);
-  }
+  .profile-text { font-size: 10.5px; line-height: 1.6; color: var(--muted); }
+  .profile-text strong { color: var(--text); font-weight: 700; }
 
-  .profile-text strong {
-    color: var(--text);
-    font-weight: 700;
-  }
+  .skill-item { margin-bottom: 9px; }
+  .skill-label { font-size: 10.5px; color: var(--text); margin-bottom: 3px; }
+  .skill-bar-bg { width: 100%; height: 6px; background: #D8C8EC; border-radius: 10px; overflow: hidden; }
+  .skill-bar-fill { height: 100%; background: var(--purple); border-radius: 10px; }
 
-  /* Skills */
-  .skill-item { margin-bottom: 16px; }
+  .left-section { margin-top: 14px; }
 
-  .skill-label {
-    font-size: 12.5px;
-    color: var(--text);
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 5px;
-    letter-spacing: 0.02em;
-  }
-
-  .skill-bar-bg {
-    width: 100%;
-    height: 7px;
-    background: #D8C8EC;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  .skill-bar-fill {
-    height: 100%;
-    background: var(--purple);
-    border-radius: 10px;
-    position: relative;
-    animation: growBar 1.2s ease-out forwards;
-  }
-
-  @keyframes growBar {
-    from { width: 0 !important; }
-  }
-
-  /* Contact section in left col */
   .contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 10px;
-    font-size: 12px;
-    color: var(--muted);
+    display: flex; align-items: flex-start;
+    gap: 7px; margin-bottom: 7px;
+    font-size: 10px; color: var(--muted);
   }
   .contact-icon {
-    width: 22px; height: 22px;
-    background: var(--purple);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-    color: #fff;
-    font-size: 10px;
+    width: 17px; height: 17px; background: var(--purple);
+    border-radius: 50%; display: flex; align-items: center;
+    justify-content: center; flex-shrink: 0; font-size: 8px;
   }
 
-  /* RIGHT COLUMN */
-  .right-col {
-    flex: 1;
-    padding: 36px 36px;
-  }
+  /* RIGHT */
+  .right-col { flex: 1; padding: 20px 26px; }
+  .right-section { margin-top: 16px; }
 
-  /* Timeline */
-  .timeline { margin-top: 6px; position: relative; padding-left: 22px; }
-
+  .timeline { margin-top: 4px; position: relative; padding-left: 17px; }
   .timeline::before {
-    content: '';
-    position: absolute;
-    left: 4px; top: 18px; bottom: 18px;
+    content: ''; position: absolute;
+    left: 3px; top: 12px; bottom: 12px;
     width: 2px;
     background: linear-gradient(to bottom, var(--purple) 0%, #D8C8EC 100%);
   }
-
-  .tl-item {
-    position: relative;
-    margin-bottom: 28px;
-  }
-
+  .tl-item { position: relative; margin-bottom: 12px; }
   .tl-dot {
-    position: absolute;
-    left: -22px; top: 4px;
-    width: 12px; height: 12px;
-    background: var(--purple);
-    border-radius: 50%;
-    border: 2px solid #fff;
+    position: absolute; left: -17px; top: 3px;
+    width: 9px; height: 9px; background: var(--purple);
+    border-radius: 50%; border: 2px solid #fff;
     box-shadow: 0 0 0 2px var(--purple);
   }
+  .tl-year { font-size: 9.5px; color: var(--muted); letter-spacing: 0.1em; margin-bottom: 1px; font-weight: 500; }
+  .tl-role { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 2px; }
+  .tl-desc { font-size: 10.5px; color: var(--muted); line-height: 1.55; }
+  .tl-desc strong { color: var(--text); font-weight: 700; }
 
-  .tl-year {
-    font-size: 11.5px;
-    color: var(--muted);
-    letter-spacing: 0.12em;
-    margin-bottom: 3px;
-    font-weight: 500;
-  }
-
-  .tl-role {
-    font-family: 'Nunito', sans-serif;
-    font-size: 17px;
-    font-weight: 800;
-    color: var(--text);
-    margin-bottom: 5px;
-  }
-
-  .tl-desc {
-    font-size: 12.5px;
-    color: var(--muted);
-    line-height: 1.65;
-  }
-
-  .tl-desc strong {
-    color: var(--text);
-    font-weight: 700;
-  }
+  .pill-wrap { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .pill { border-radius: 20px; padding: 3px 11px; font-size: 10px; font-weight: 600; }
+  .pill-solid { background: var(--purple); color: #fff; }
+  .pill-outline { background: var(--bg); color: var(--purple); border: 1.5px solid var(--purple); }
 
   @media print {
     body { background: none; padding: 0; }
     .resume { box-shadow: none; border-radius: 0; width: 100%; }
+    .download-btn { display: none; }
+  }
+
+  /* ── TABLET (max 768px) ── */
+  @media (max-width: 768px) {
+    body { padding: 0; background: var(--bg); }
+
+    .resume { width: 100%; border-radius: 0; box-shadow: none; }
+
+    .header {
+      height: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      padding: 18px 16px 0px;
+      gap: 0;
+    }
+
+    .header-illustration {
+      width: 90px;
+      height: 90px;
+      flex-shrink: 0;
+      position: relative;
+      align-self: flex-end;
+    }
+    .illus-bg-circle {
+      width: 90px; height: 90px;
+    }
+    .illus-yellow-circle {
+      width: 50px; height: 50px;
+      bottom: 12px; left: 56px;
+    }
+    .illus-purple-shape {
+      width: 36px; height: 48px;
+      bottom: 26px; left: 12px;
+    }
+    .illus-person svg {
+      width: 82px; height: 92px;
+    }
+
+    .header-content {
+      padding: 0 10px 16px 6px;
+      align-items: flex-start;
+      text-align: left;
+      margin-bottom: 0;
+      flex: 1;
+      min-width: 120px;
+      justify-content: flex-end;
+    }
+    .header-hello { font-size: 12px; }
+    .header-title { font-size: 28px; text-align: left; }
+
+    .header-contact {
+      align-items: center;
+      padding: 10px 16px 14px;
+      min-width: unset;
+      width: 100%;
+      gap: 5px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .header-contact p { font-size: 12px; text-align: center; }
+    .download-btn { margin-top: 10px; font-size: 12px; padding: 8px 18px; }
+
+    .body { flex-direction: column; }
+
+    .left-col {
+      width: 100%;
+      border-right: none;
+      border-bottom: 2px dotted #c8b8d8;
+      padding: 24px 22px;
+    }
+
+    .right-col { padding: 24px 22px; }
+
+    .section-title { font-size: 18px; }
+    .dotted-divider { margin: 7px 0 15px 0; }
+    .profile-text { font-size: 13.5px; line-height: 1.7; }
+
+    .skill-label { font-size: 13px; }
+    .skill-bar-bg { height: 8px; }
+    .skill-item { margin-bottom: 14px; }
+
+    .left-section { margin-top: 22px; }
+    .right-section { margin-top: 24px; }
+
+    .contact-item { font-size: 13px; gap: 10px; margin-bottom: 11px; }
+    .contact-icon { width: 24px; height: 24px; font-size: 11px; }
+
+    .tl-item { margin-bottom: 20px; }
+    .tl-year { font-size: 11.5px; }
+    .tl-role { font-size: 16px; }
+    .tl-desc { font-size: 13px; line-height: 1.65; }
+    .timeline { padding-left: 20px; }
+    .tl-dot { width: 11px; height: 11px; left: -20px; }
+
+    .pill { font-size: 12.5px; padding: 5px 14px; }
+    .pill-wrap { gap: 8px; margin-top: 8px; }
+
+    /* Skills in 2-col grid on tablet */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 24px;
+    }
+  }
+
+  /* ── MOBILE (max 480px) ── */
+  @media (max-width: 480px) {
+    .header { padding: 22px 16px 18px; }
+    .header-title { font-size: 28px; }
+    .header-hello { font-size: 12px; }
+    .header-contact p { font-size: 12px; }
+    .download-btn { font-size: 12px; padding: 8px 18px; }
+    .left-col { padding: 18px 16px; }
+    .right-col { padding: 18px 16px; }
+    .section-title { font-size: 16px; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .pill { font-size: 11.5px; padding: 4px 12px; }
   }
 </style>
 </head>
@@ -352,7 +324,6 @@
 
   <!-- HEADER -->
   <div class="header">
-    <!-- Decorative elements -->
     <span class="deco deco-cross1">✕</span>
     <span class="deco deco-cross2">✕</span>
     <span class="deco deco-circle1"></span>
@@ -362,47 +333,31 @@
     <span class="deco deco-line"></span>
     <span class="deco deco-circle4"></span>
 
-    <!-- Illustration -->
     <div class="header-illustration">
       <div class="illus-bg-circle"></div>
       <div class="illus-yellow-circle"></div>
       <div class="illus-purple-shape"></div>
       <div class="illus-person">
-        <!-- SVG of person at laptop -->
         <svg viewBox="0 0 170 190" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Body / shirt -->
           <ellipse cx="85" cy="155" rx="48" ry="38" fill="#E8617A"/>
-          <!-- Head -->
           <ellipse cx="85" cy="85" rx="32" ry="34" fill="#FDBCB4"/>
-          <!-- Hair -->
           <ellipse cx="85" cy="65" rx="34" ry="24" fill="#5B2D8E"/>
           <ellipse cx="62" cy="82" rx="10" ry="22" fill="#5B2D8E"/>
-          <!-- Hair bun -->
           <circle cx="96" cy="52" r="12" fill="#5B2D8E"/>
-          <!-- Glasses -->
           <rect x="69" y="88" width="14" height="10" rx="4" fill="none" stroke="#333" stroke-width="2"/>
           <rect x="87" y="88" width="14" height="10" rx="4" fill="none" stroke="#333" stroke-width="2"/>
           <line x1="83" y1="93" x2="87" y2="93" stroke="#333" stroke-width="1.5"/>
-          <!-- Nose -->
           <ellipse cx="85" cy="100" rx="3" ry="2" fill="#F09090"/>
-          <!-- Smile -->
           <path d="M78 109 Q85 116 92 109" stroke="#c07060" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <!-- Earring -->
           <circle cx="53" cy="95" r="4" fill="#FF6B6B"/>
-          <!-- Necklace -->
           <path d="M72 125 Q85 132 98 125" stroke="#f0c0c0" stroke-width="2" fill="none"/>
-          <!-- Arms -->
           <ellipse cx="50" cy="158" rx="14" ry="8" fill="#E8617A" transform="rotate(-20 50 158)"/>
           <ellipse cx="120" cy="158" rx="14" ry="8" fill="#E8617A" transform="rotate(20 120 158)"/>
-          <!-- Hands -->
           <ellipse cx="42" cy="168" rx="9" ry="6" fill="#FDBCB4"/>
           <ellipse cx="128" cy="168" rx="9" ry="6" fill="#FDBCB4"/>
-          <!-- Laptop base -->
           <rect x="38" y="168" width="94" height="10" rx="3" fill="#4ECDC4"/>
-          <!-- Laptop screen -->
           <rect x="50" y="148" width="70" height="44" rx="5" fill="#3ABDB5"/>
           <rect x="55" y="153" width="60" height="34" rx="3" fill="#7FFFFA" opacity="0.3"/>
-          <!-- Screen content lines -->
           <line x1="60" y1="162" x2="108" y2="162" stroke="#fff" stroke-width="2" opacity="0.7"/>
           <line x1="60" y1="170" x2="95" y2="170" stroke="#fff" stroke-width="2" opacity="0.5"/>
           <line x1="60" y1="178" x2="100" y2="178" stroke="#fff" stroke-width="2" opacity="0.5"/>
@@ -410,20 +365,16 @@
       </div>
     </div>
 
-    <!-- Title -->
     <div class="header-content">
       <p class="header-hello">Hello! I am</p>
       <h1 class="header-title">Graphic<br>Designer</h1>
     </div>
 
-    <!-- Contact -->
     <div class="header-contact">
       <p>+91 7095219161</p>
       <p>kumarasaikarella@gmail.com</p>
       <p>linkedin.com/in/kumara-sai-k</p>
-      <a class="download-btn" href="#" onclick="window.print(); return false;">
-        ⬇ Download Resume
-      </a>
+      <a class="download-btn" href="#" onclick="window.print(); return false;">⬇ Download Resume</a>
     </div>
   </div>
 
@@ -432,73 +383,62 @@
 
     <!-- LEFT -->
     <div class="left-col">
-
       <h2 class="section-title">Profile</h2>
       <hr class="dotted-divider"/>
       <p class="profile-text">
-        <strong>Creative Graphic Designer with 4 years of professional experience</strong> crafting compelling visual identities, marketing materials, and digital content. Skilled in translating brand vision into impactful designs using industry-leading tools. <strong>Passionate about visual storytelling</strong> and delivering pixel-perfect results across print and digital media.
+        <strong>Creative Graphic Designer with 4 years of experience</strong> crafting compelling visual identities, marketing materials, and digital content. <strong>Passionate about visual storytelling</strong> and delivering pixel-perfect results across print and digital media.
       </p>
 
-      <br/>
-      <h2 class="section-title" style="margin-top:16px;">Skills</h2>
-      <hr class="dotted-divider"/>
-
-      <div class="skill-item">
-        <div class="skill-label">Adobe Photoshop</div>
-        <div class="skill-bar-bg">
-          <div class="skill-bar-fill" style="width:92%;"></div>
+      <div class="left-section">
+        <h2 class="section-title">Skills</h2>
+        <hr class="dotted-divider"/>
+        <div class="skills-grid">
+        <div class="skill-item">
+          <div class="skill-label">Adobe Photoshop</div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:92%"></div></div>
         </div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-label">Adobe Illustrator</div>
-        <div class="skill-bar-bg">
-          <div class="skill-bar-fill" style="width:88%;"></div>
+        <div class="skill-item">
+          <div class="skill-label">Adobe Illustrator</div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:88%"></div></div>
         </div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-label">Adobe Premiere Pro</div>
-        <div class="skill-bar-bg">
-          <div class="skill-bar-fill" style="width:80%;"></div>
+        <div class="skill-item">
+          <div class="skill-label">Adobe Premiere Pro</div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%"></div></div>
         </div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-label">Brand Identity Design</div>
-        <div class="skill-bar-bg">
-          <div class="skill-bar-fill" style="width:85%;"></div>
+        <div class="skill-item">
+          <div class="skill-label">Brand Identity Design</div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div>
         </div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-label">Digital & Print Media</div>
-        <div class="skill-bar-bg">
-          <div class="skill-bar-fill" style="width:83%;"></div>
+        <div class="skill-item">
+          <div class="skill-label">Digital & Print Media</div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:83%"></div></div>
         </div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-label">Video Editing</div>
-        <div class="skill-bar-bg">
-          <div class="skill-bar-fill" style="width:78%;"></div>
+        <div class="skill-item">
+          <div class="skill-label">Video Editing</div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:78%"></div></div>
+        </div>
         </div>
       </div>
 
-      <br/>
-      <h2 class="section-title" style="margin-top:10px;">Contact</h2>
-      <hr class="dotted-divider"/>
-
-      <div class="contact-item">
-        <div class="contact-icon">📞</div>
-        <span>+91 7095219161</span>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">✉</div>
-        <span>kumarasaikarella@gmail.com</span>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">🔗</div>
-        <span>linkedin.com/in/kumara-sai-k-03b640131</span>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">💻</div>
-        <span>github.com/kumarasai</span>
+      <div class="left-section">
+        <h2 class="section-title">Contact</h2>
+        <hr class="dotted-divider"/>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <span>+91 7095219161</span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉</div>
+          <span>kumarasaikarella@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🔗</div>
+          <span>linkedin.com/in/kumara-sai-k</span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💻</div>
+          <span>github.com/kumarasai</span>
+        </div>
       </div>
     </div>
 
@@ -512,46 +452,41 @@
           <div class="tl-dot"></div>
           <div class="tl-year">2017 – 2021</div>
           <div class="tl-role">B.Tech. Computer Science</div>
-          <div class="tl-desc">
-            <strong>RGUKT – IIIT Nuzvid, Andhra Pradesh.</strong> Developed a strong foundation in design thinking, digital media, and visual communication alongside core technology subjects. GPA: 7.8 / 10.0.
+          <div class="tl-desc"><strong>RGUKT – IIIT Nuzvid, Andhra Pradesh.</strong> Foundation in design thinking, digital media, and visual communication. GPA: 7.8 / 10.0.</div>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <h2 class="section-title">Work Experience</h2>
+        <hr class="dotted-divider"/>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-year">2022 – 2024</div>
+            <div class="tl-role">Graphic Designer</div>
+            <div class="tl-desc"><strong>Target Digital Network.</strong> Designed social media graphics, marketing banners, brand identity materials, and promotional videos using Adobe Photoshop, Illustrator, and Premiere Pro for digital campaigns.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-year">2024 – Present</div>
+            <div class="tl-role">Senior Graphic Designer</div>
+            <div class="tl-desc"><strong>Target Digital Network.</strong> Leading creative direction for multi-channel campaigns across print and digital platforms. Streamlined design workflows and mentored junior designers, reducing turnaround time by 20%.</div>
           </div>
         </div>
       </div>
 
-      <h2 class="section-title" style="margin-top: 28px;">Work Experience</h2>
-      <hr class="dotted-divider"/>
-      <div class="timeline">
-
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-year">2022 – 2024</div>
-          <div class="tl-role">Graphic Designer</div>
-          <div class="tl-desc">
-            <strong>Target Digital Network.</strong> Designed and delivered a wide range of creative assets including social media graphics, marketing banners, brand identity materials, and promotional videos. Used Adobe Photoshop and Illustrator to create visually compelling content that increased client brand engagement. Edited and produced video content using Adobe Premiere Pro for digital campaigns.
-          </div>
+      <div class="right-section">
+        <h2 class="section-title">Tools & Software</h2>
+        <hr class="dotted-divider"/>
+        <div class="pill-wrap">
+          <span class="pill pill-solid">Adobe Photoshop</span>
+          <span class="pill pill-solid">Adobe Illustrator</span>
+          <span class="pill pill-solid">Premiere Pro</span>
+          <span class="pill pill-outline">Brand Design</span>
+          <span class="pill pill-outline">Video Editing</span>
+          <span class="pill pill-outline">Digital Marketing</span>
+          <span class="pill pill-outline">Print Media</span>
         </div>
-
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-year">2024 – Present</div>
-          <div class="tl-role">Senior Graphic Designer</div>
-          <div class="tl-desc">
-            <strong>Target Digital Network.</strong> Leading creative direction for multi-channel campaigns across print and digital platforms. Collaborated with marketing and content teams to conceptualize and execute brand-aligned visuals. Streamlined design workflows and mentored junior designers, reducing project turnaround time by 20%.
-          </div>
-        </div>
-
-      </div>
-
-      <h2 class="section-title" style="margin-top: 28px;">Tools & Software</h2>
-      <hr class="dotted-divider"/>
-      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:8px;">
-        <span style="background:var(--purple);color:#fff;border-radius:20px;padding:5px 16px;font-size:12px;font-weight:600;">Adobe Photoshop</span>
-        <span style="background:var(--purple);color:#fff;border-radius:20px;padding:5px 16px;font-size:12px;font-weight:600;">Adobe Illustrator</span>
-        <span style="background:var(--purple);color:#fff;border-radius:20px;padding:5px 16px;font-size:12px;font-weight:600;">Premiere Pro</span>
-        <span style="background:#F5EFE6;color:var(--purple);border:2px solid var(--purple);border-radius:20px;padding:5px 16px;font-size:12px;font-weight:600;">Brand Design</span>
-        <span style="background:#F5EFE6;color:var(--purple);border:2px solid var(--purple);border-radius:20px;padding:5px 16px;font-size:12px;font-weight:600;">Video Editing</span>
-        <span style="background:#F5EFE6;color:var(--purple);border:2px solid var(--purple);border-radius:20px;padding:5px 16px;font-size:12px;font-weight:600;">Digital Marketing</span>
-        <span style="background:#F5EFE6;color:var(--purple);border:2px solid var(--purple);border-radius:20px;padding:5px 16px;font-size:12px;font-weight:600;">Print Media</span>
       </div>
 
     </div>
